@@ -1,0 +1,35 @@
+[debug] [2024-01-23T12:43:40.963Z] ----------------------------------------------------------------------
+[debug] [2024-01-23T12:43:40.978Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\snaga\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-01-23T12:43:40.979Z] CLI Version:   13.0.3
+[debug] [2024-01-23T12:43:40.979Z] Platform:      win32
+[debug] [2024-01-23T12:43:40.979Z] Node Version:  v21.5.0
+[debug] [2024-01-23T12:43:40.980Z] Time:          Tue Jan 23 2024 18:13:40 GMT+0530 (India Standard Time)
+[debug] [2024-01-23T12:43:40.981Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-23T12:43:40.988Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-01-23T12:43:41.306Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-23T12:43:41.307Z] > authorizing via signed-in user (dileepnagankera@gmail.com)
+[debug] [2024-01-23T12:43:41.307Z] [iam] checking project netflixgpt-57a56 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-01-23T12:43:41.312Z] > refreshing access token with scopes: []
+[debug] [2024-01-23T12:43:41.344Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-01-23T12:43:41.344Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-23T12:43:41.931Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-01-23T12:43:41.932Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-23T12:43:41.951Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-57a56:testIamPermissions [none]
+[debug] [2024-01-23T12:43:41.952Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-57a56:testIamPermissions x-goog-quota-user=projects/netflixgpt-57a56
+[debug] [2024-01-23T12:43:41.952Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-57a56:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-23T12:43:42.318Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-01-23T12:43:42.319Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2024-01-23T12:43:43.792Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-57a56:testIamPermissions 200
+[debug] [2024-01-23T12:43:43.793Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-57a56:testIamPermissions {}
+[debug] [2024-01-23T12:43:43.793Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project netflixgpt-57a56:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2024-01-23T12:43:43.796Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/netflixgpt-57a56 [none]
+[debug] [2024-01-23T12:43:44.387Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/netflixgpt-57a56 403
+[debug] [2024-01-23T12:43:44.388Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/netflixgpt-57a56 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-01-23T12:43:44.393Z] HTTP Error: 403, The caller does not have permission
+[debug] [2024-01-23T12:43:44.397Z] Specified "public" directory "build" does not exist; Deploy to Hosting site "" may fail or be empty.
+[error] 
+[error] Error: Assertion failed: resolving hosting target of a site with no site name or target name. This should have caused an error earlier
